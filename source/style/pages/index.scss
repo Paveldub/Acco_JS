@@ -1,178 +1,75 @@
+.acco {
+  &__trigger {
+    background: #ff8663;
+    padding: rem(15px) rem(15px);
+    border-radius: rem(25px);
+    width: rem(460px);
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
 
-.hero{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-}
-
-.container--changed {
-    @include tablets {
-        display: flex;
-        flex-flow: row wrap;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: rem(10px) solid #ff8663;
+      border-right: rem(10px) solid transparent;
+      border-bottom: rem(10px) solid transparent;
+      border-left: rem(10px) solid transparent;
+      border-bottom-width: 0;
+      transition: all 0.5s;
+      margin-left: auto;
     }
-}
 
-.header {
-  width: 100%;
-  height: rem(100px);
-  background: $header;
-  position: fixed;
-  z-index: 1;
+    &--changed {
+      transition: background-color .2s linear;
+      background: #696666;
 
-  &__title {
-      @include tablets {
-          display: none;
+      &:hover {
+        background-color: #8d8282; 
       }
-      color: #fff;
-      h2 {
-          text-transform: uppercase;
-      }
+    }
   }
 }
 
-.content {
-  padding-top: rem(100px);
-  width: 100%;
-  display: flex;
-  flex: 1;
-
-  &__pic {
-  display: flex;
-  justify-content: center;
-  margin-bottom: rem(40px);
-  @include tablets {
-      margin-bottom: 0; 
-      margin-top: 20px;
-      width: 100%;
-  }
-
-  &--changed {
-      @include tablets {
-          display: none;
-      }
-  }
+.acco__item {
+  margin-bottom: rem(6px);
+  background: #f1f1f1;
+  border-radius: rem(25px);
+  width: rem(461px);
 
   &:last-child {
-      margin-bottom: 0;
-      }
-  }
-
-  &__text {
-      @include tablets {
-          margin-bottom: 0;
-      }
-      margin-bottom: rem(50px);
-
-      &--changed {
-          @include tablets {
-              display: none;
-          }
-      }
-  }
-
-  &__sidebar {
-      @include tablets {
-          display: none;
-  }
- 
-  width: 20%;
-  height: 100%;
-  background: $sidebar;
-  position: fixed;
-  top: 0;
-  left: 0;
-  }
-
-  &__center {
-       @include tablets {
-          display: flex;
-          width: 100%;
-          margin-left: 0;
-          flex-flow: row wrap;
-          position: relative;
-          padding: rem(15px) rem(55px);
-      }
-  width: 40%;
-  height: 100%;
-  background: $center;
-  padding: rem(20px) rem(20px);
-  margin-left: 20%;
-  }
-
-  &__right {
-      @include tablets {
-          width: 100%;
-          position: static;
-      }
-      width: 40%;
-      height: 100%;
-      background: $right;
-      position: fixed;
-      top: 0;
-      right: 0;
+    margin-bottom: 0;
   }
 }
 
-.content__sidebar--active {
-    @include tablets{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20%;
-        height: 100%;
-        background: $sidebar;
-        z-index: 2;
-        animation-name: fadeIn;
-        animation-duration: .7s;
+.acco__item--color {
+  background: #e7e7e7;
+  color: #696666;
+}
+
+.acco__content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height .3s ease-in-out;
+}
+
+.acco__item--active {
+  transition: all 0.5s ease;
+  .acco__trigger {
+      transition: background-color .2s linear;
+    &:after {
+      transform: rotate(-180deg);
+      border-top: rem(10px) solid #fff;
+      border-right: rem(10px) solid transparent;
+      border-bottom: rem(10px) solid transparent;
+      border-left: rem(10px) solid transparent;
+      border-bottom-width: 0;
     }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    &:hover {
+        background-color: #ea7a5a;
     }
-    to {
-        opacity: 1;
-    }
+  }
 }
-
-.map {
-    @include tablets {
-        display: none;
-    }
-}
-
-#map {
-  height: rem(650px);
-  width: 100%;
-}
-
-.hamburger {
-    @include tablets {
-    z-index: 5 !important;
-    display: block !important;
-    }
-    display: none !important;
-    padding: 0 0 !important;
-}
-
-.hamburger-box {
-    width: 40px;
-    height: 30px !important;
-}
-
-.hamburger-inner::before {
-    background-color: $burger !important;
-}
-
-.hamburger-inner {
-    background-color: $burger !important;
-}
-
-.hamburger-inner::after {
-    background-color: $burger !important;
-}
-
-
