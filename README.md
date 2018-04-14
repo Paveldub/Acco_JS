@@ -1,6 +1,6 @@
-﻿Test template
+﻿Tabs js
 
-Link: https://paveldub.github.io/new_test/build/index.html
+Link: https://paveldub.github.io/tabs_JS/build/index.html
 
 Stack:
  - Gulp 4.0
