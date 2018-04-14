@@ -1,6 +1,10 @@
-$('#button').on('click', () => {
+
+$('#button').on('click', e => {
+    e.preventDefault();
+    
     $('#button').toggleClass('is-active');
     $('.content__sidebar').toggleClass('content__sidebar--active');
+
 });
 
 var map;
