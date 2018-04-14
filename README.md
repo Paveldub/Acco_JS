@@ -1,6 +1,6 @@
-﻿Template for travel agency 
+﻿Test template
 
-Link: https://paveldub.github.io/agency/build/index.html
+Link: https://paveldub.github.io/new_test/build/index.html
 
 Stack:
  - Gulp 4.0
