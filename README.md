@@ -1,6 +1,6 @@
 ﻿Tabs js
 
-Link: https://paveldub.github.io/tabs_JS/build/index.html
+Link: https://paveldub.github.io/Acco_JS/build/index.html
 
 Stack:
  - Gulp 4.0
